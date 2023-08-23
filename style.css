@@ -9,6 +9,8 @@ p {
 }
 
 /* PC用スタイル */
+@media screen and (min-width: 768px) {
+    
 /* 横幅 */
 body {
     max-width: 1080px;
@@ -49,6 +51,10 @@ header {
 
 #nav-pc > a:active {
     color: #0d0d0d;
+}
+
+#nav-sp, #menu-sp {
+    display: none;
 }
 
 #main-visual {
@@ -299,6 +305,43 @@ h3 {
     margin: 10px 0 0 0;
 }
 
+/* ケース */
+#cases {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+#cases > ul {
+    display: flex;
+    list-style: none;
+}
+
+.case-card {
+    width: 33%;
+    margin: 20px;
+    background-color: #ffffff;
+    min-height: 400px;
+    box-shadow: 2px 2px 10px #ececec;
+}
+
+.case-img {
+    width: 100%;
+}
+
+.case-info {
+    padding: 10px 20px 10px 20px;
+}
+
+.case-name {
+    color: #2710d5;
+    font-size: 19px;
+}
+
+.case-content {
+    font-size: 14px;
+}
+
 /* 会社概要 */
 #company {
     margin: 80px auto 80px auto;
@@ -446,39 +489,149 @@ footer {
     float: right;
 }
 
-/* ケース */
-#cases {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    width: 100%;
 }
 
-#cases > ul {
-    display: flex;
-    list-style: none;
-}
+/* スマートフォン用のスタイル */
 
-.case-card {
-    width: 33%;
-    margin: 20px;
-    background-color: #ffffff;
-    min-height: 400px;
-    box-shadow: 2px 2px 10px #ececec;
-}
+@media screen and (max-width: 767px) {
+    body {
+        min-width: 375px;
+        margin: 0;
+    }
 
-.case-img {
-    width: 100%;
-}
+    #nav-pc {
+        display: none;
+    }
 
-.case-info {
-    padding: 10px 20px 10px 20px;
-}
+    #menu-sp {
+        float: right;
+        padding: 0;
+    }
 
-.case-name {
-    color: #2710d5;
-    font-size: 19px;
-}
+    #nav-sp {
+        background-color: #2710d5;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: none;
+        z-index: 100;
+    }
 
-.case-content {
-    font-size: 14px;
+    #close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    #logo-sp {
+        margin: 80px 0 30px 20px;
+    }
+
+    #nav-sp > a {
+        display: block;
+    }
+
+    #nav-sp > a:link {
+        color: #ffffff;
+    }
+
+    #nav-sp > a:visited {
+        color: #ffffff;
+    }
+
+    #nav-sp > a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+
+    #nav-sp > a:active {
+        color: #ffffff;
+    }
+
+    #nav-sp > .menu {
+        text-decoration: none;
+        display: block;
+        margin: 0 20px 0 20px;
+        height: 44px;
+        font-size: 16px;
+        background-image: url("images/arrow.png");
+        background-repeat: no-repeat;
+        background-position: right top;
+    }
+
+    #sns {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+    }
+
+    #sns > a {
+        margin-right: 30px;
+    }
+
+    /* メインビジュアル */
+    #main-visual {
+        position: relative;
+        height: 470px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #main-visual > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #2710d5;
+        color: white;
+        border-radius: 0 0 476px 0;
+        text-align: center;
+        height: 280px;
+        width: 100%;
+        z-index: 11;
+    }
+
+    #main-visual > div > h1 {
+        font-size: 28px;
+        margin: 90px 0 0 0;
+    }
+
+    #main-visual > div > p {
+        margin: 0;
+    }
+
+    #main-visual > img {
+        width: 100%;
+        border-radius: 476px 0 0 0;
+        z-index: 10;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    h2::after {
+        content: url("images/line.png");
+        margin-left: 10px;
+    }
+
+    h3 {
+        font-size: 24px;
+        margin: 10px 0 0 0;
+    }
+
+    /* ミッション */
+
+    #mission {
+        margin: 20px;
+    }
+
+    #mission-photo {
+        width: 100%;
+    }
+
+    #s2dgs {
+        width: 100%;
+    }
+    
 }
